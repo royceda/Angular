@@ -1,0 +1,41 @@
+<h1> Article</h1>
+
+<p>
+ lorem ipsum
+</p>
+
+
+<h2> Commentaires </h2>
+
+
+<a href="#/comments">Voir les comments</a>
+
+
+ <input type="text" ng-model="task"/>
+ {{"salut " + task}}
+
+<p><input type="text" ng-model="query" /></p>
+
+Order By:
+<select ng-model="order">
+<option value="+username">Par Nom</option>
+ <option value="+content">Par contenu</option>
+</select>
+
+filter by:
+<select ng-model="type">
+<option value="username">sur nom</option>
+<option value="content">sur contenu</option>
+</select>
+
+{{type}}
+
+<div ng-init="comments=[{username:'Marc', content:'Salut les gens'},
+{username:'Jean', content:'yooo'},
+{username:'Reda', content:'First'}]">
+{{comments[1].username = "hooo"}}
+<div ng-repeat="comment in comments | filter:{username: query} | orderBy:order">
+ <p><strong>{{comment.username | uppercase}}<strong>
+  {{comment.content}}</p>
+ </div>
+</div>

@@ -1,0 +1,737 @@
+var monApp = angular.module('monApp', ['ngRoute']);
+
+ monApp.config([ '$routeProvider', function($routeProvider){
+ $routeProvider
+ .when('/', {templateUrl: 'partials/home.html'})
+ .when('/comments', {templateUrl: 'partials/comments.html'})
+ .otherwise({redirectTo : 'partials/home.html'});
+
+}]);
+
+monApp.controller('PostCtrl', function ())
+
+
+  monApp.controller('CommentsCtrl2', function ($scope){
+   $scope.comments =[{
+  "id": 1,
+  "first_name": "Jennifer",
+  "last_name": "Ross",
+  "email": "jross0@ask.com",
+  "country": "Poland",
+  "ip_address": "146.25.89.141"
+}, {
+  "id": 2,
+  "first_name": "Harold",
+  "last_name": "Torres",
+  "email": "htorres1@wsj.com",
+  "country": "Peru",
+  "ip_address": "88.144.209.72"
+}];
+  });
+
+
+  function CommentsCtrl($scope){
+   $scope.comments = [{
+  "id": 1,
+  "first_name": "Jennifer",
+  "last_name": "Ross",
+  "email": "jross0@ask.com",
+  "country": "Poland",
+  "ip_address": "146.25.89.141"
+}, {
+  "id": 2,
+  "first_name": "Harold",
+  "last_name": "Torres",
+  "email": "htorres1@wsj.com",
+  "country": "Peru",
+  "ip_address": "88.144.209.72"
+}, {
+  "id": 3,
+  "first_name": "Carol",
+  "last_name": "Hernandez",
+  "email": "chernandez2@tuttocitta.it",
+  "country": "Morocco",
+  "ip_address": "174.14.216.135"
+}, {
+  "id": 4,
+  "first_name": "Craig",
+  "last_name": "Gibson",
+  "email": "cgibson3@sogou.com",
+  "country": "Russia",
+  "ip_address": "80.97.86.66"
+}, {
+  "id": 5,
+  "first_name": "Anna",
+  "last_name": "Richards",
+  "email": "arichards4@wp.com",
+  "country": "Philippines",
+  "ip_address": "241.72.203.170"
+}, {
+  "id": 6,
+  "first_name": "Dennis",
+  "last_name": "Miller",
+  "email": "dmiller5@about.me",
+  "country": "Indonesia",
+  "ip_address": "184.66.189.250"
+}, {
+  "id": 7,
+  "first_name": "Joseph",
+  "last_name": "Garza",
+  "email": "jgarza6@tripadvisor.com",
+  "country": "Germany",
+  "ip_address": "161.153.157.236"
+}, {
+  "id": 8,
+  "first_name": "Katherine",
+  "last_name": "Russell",
+  "email": "krussell7@wisc.edu",
+  "country": "Russia",
+  "ip_address": "180.136.182.100"
+}, {
+  "id": 9,
+  "first_name": "Mary",
+  "last_name": "Welch",
+  "email": "mwelch8@google.de",
+  "country": "Brazil",
+  "ip_address": "249.77.32.221"
+}, {
+  "id": 10,
+  "first_name": "Brian",
+  "last_name": "Alexander",
+  "email": "balexander9@wiley.com",
+  "country": "China",
+  "ip_address": "138.212.85.181"
+}, {
+  "id": 11,
+  "first_name": "Gregory",
+  "last_name": "Bradley",
+  "email": "gbradleya@vimeo.com",
+  "country": "China",
+  "ip_address": "0.135.94.36"
+}, {
+  "id": 12,
+  "first_name": "Brandon",
+  "last_name": "Berry",
+  "email": "bberryb@apache.org",
+  "country": "Nicaragua",
+  "ip_address": "224.232.180.192"
+}, {
+  "id": 13,
+  "first_name": "Wanda",
+  "last_name": "Richards",
+  "email": "wrichardsc@cargocollective.com",
+  "country": "Indonesia",
+  "ip_address": "208.88.12.64"
+}, {
+  "id": 14,
+  "first_name": "Betty",
+  "last_name": "Coleman",
+  "email": "bcolemand@blogs.com",
+  "country": "Azerbaijan",
+  "ip_address": "129.98.100.245"
+}, {
+  "id": 15,
+  "first_name": "Karen",
+  "last_name": "Graham",
+  "email": "kgrahame@dion.ne.jp",
+  "country": "Philippines",
+  "ip_address": "206.15.240.221"
+}, {
+  "id": 16,
+  "first_name": "Raymond",
+  "last_name": "Castillo",
+  "email": "rcastillof@soup.io",
+  "country": "Poland",
+  "ip_address": "71.234.219.52"
+}, {
+  "id": 17,
+  "first_name": "Kimberly",
+  "last_name": "Fields",
+  "email": "kfieldsg@xinhuanet.com",
+  "country": "China",
+  "ip_address": "247.49.238.119"
+}, {
+  "id": 18,
+  "first_name": "Thomas",
+  "last_name": "Perry",
+  "email": "tperryh@surveymonkey.com",
+  "country": "Canada",
+  "ip_address": "45.81.135.138"
+}, {
+  "id": 19,
+  "first_name": "Linda",
+  "last_name": "Gordon",
+  "email": "lgordoni@wikipedia.org",
+  "country": "Indonesia",
+  "ip_address": "202.234.178.250"
+}, {
+  "id": 20,
+  "first_name": "Wayne",
+  "last_name": "Carroll",
+  "email": "wcarrollj@nsw.gov.au",
+  "country": "Ivory Coast",
+  "ip_address": "44.107.134.232"
+}, {
+  "id": 21,
+  "first_name": "Mildred",
+  "last_name": "King",
+  "email": "mkingk@google.com.hk",
+  "country": "Indonesia",
+  "ip_address": "203.230.44.91"
+}, {
+  "id": 22,
+  "first_name": "Barbara",
+  "last_name": "Tucker",
+  "email": "btuckerl@wired.com",
+  "country": "Portugal",
+  "ip_address": "238.241.173.215"
+}, {
+  "id": 23,
+  "first_name": "Donna",
+  "last_name": "Hall",
+  "email": "dhallm@123-reg.co.uk",
+  "country": "Mongolia",
+  "ip_address": "96.25.225.220"
+}, {
+  "id": 24,
+  "first_name": "Gregory",
+  "last_name": "Sullivan",
+  "email": "gsullivann@springer.com",
+  "country": "Russia",
+  "ip_address": "140.231.53.249"
+}, {
+  "id": 25,
+  "first_name": "Paula",
+  "last_name": "Mills",
+  "email": "pmillso@walmart.com",
+  "country": "Colombia",
+  "ip_address": "108.1.136.44"
+}, {
+  "id": 26,
+  "first_name": "Eugene",
+  "last_name": "Bowman",
+  "email": "ebowmanp@nba.com",
+  "country": "Argentina",
+  "ip_address": "204.218.87.193"
+}, {
+  "id": 27,
+  "first_name": "Maria",
+  "last_name": "Mason",
+  "email": "mmasonq@ibm.com",
+  "country": "France",
+  "ip_address": "145.219.122.158"
+}, {
+  "id": 28,
+  "first_name": "Bruce",
+  "last_name": "Johnston",
+  "email": "bjohnstonr@webnode.com",
+  "country": "Indonesia",
+  "ip_address": "139.139.219.72"
+}, {
+  "id": 29,
+  "first_name": "Andrea",
+  "last_name": "Powell",
+  "email": "apowells@amazonaws.com",
+  "country": "Greece",
+  "ip_address": "231.102.155.202"
+}, {
+  "id": 30,
+  "first_name": "Jason",
+  "last_name": "Ross",
+  "email": "jrosst@ucoz.com",
+  "country": "China",
+  "ip_address": "242.163.175.126"
+}, {
+  "id": 31,
+  "first_name": "Rebecca",
+  "last_name": "Day",
+  "email": "rdayu@google.cn",
+  "country": "Morocco",
+  "ip_address": "15.206.140.210"
+}, {
+  "id": 32,
+  "first_name": "Cynthia",
+  "last_name": "Nguyen",
+  "email": "cnguyenv@google.ru",
+  "country": "Indonesia",
+  "ip_address": "201.223.87.111"
+}, {
+  "id": 33,
+  "first_name": "Katherine",
+  "last_name": "Hart",
+  "email": "khartw@topsy.com",
+  "country": "Russia",
+  "ip_address": "144.197.51.194"
+}, {
+  "id": 34,
+  "first_name": "Joe",
+  "last_name": "Wells",
+  "email": "jwellsx@meetup.com",
+  "country": "Iraq",
+  "ip_address": "47.33.218.193"
+}, {
+  "id": 35,
+  "first_name": "George",
+  "last_name": "Moreno",
+  "email": "gmorenoy@unicef.org",
+  "country": "Sweden",
+  "ip_address": "33.155.107.245"
+}, {
+  "id": 36,
+  "first_name": "Cynthia",
+  "last_name": "Lawrence",
+  "email": "clawrencez@cnn.com",
+  "country": "Ukraine",
+  "ip_address": "121.231.33.78"
+}, {
+  "id": 37,
+  "first_name": "Paula",
+  "last_name": "Ross",
+  "email": "pross10@ezinearticles.com",
+  "country": "Indonesia",
+  "ip_address": "178.158.234.36"
+}, {
+  "id": 38,
+  "first_name": "Kathryn",
+  "last_name": "Hill",
+  "email": "khill11@technorati.com",
+  "country": "Paraguay",
+  "ip_address": "232.112.168.225"
+}, {
+  "id": 39,
+  "first_name": "George",
+  "last_name": "Wheeler",
+  "email": "gwheeler12@smugmug.com",
+  "country": "Central African Republic",
+  "ip_address": "202.144.75.59"
+}, {
+  "id": 40,
+  "first_name": "Paul",
+  "last_name": "Morris",
+  "email": "pmorris13@dell.com",
+  "country": "Mexico",
+  "ip_address": "167.159.169.90"
+}, {
+  "id": 41,
+  "first_name": "Lawrence",
+  "last_name": "Long",
+  "email": "llong14@slate.com",
+  "country": "Poland",
+  "ip_address": "240.66.210.98"
+}, {
+  "id": 42,
+  "first_name": "Edward",
+  "last_name": "Cooper",
+  "email": "ecooper15@netscape.com",
+  "country": "Indonesia",
+  "ip_address": "231.255.71.104"
+}, {
+  "id": 43,
+  "first_name": "Willie",
+  "last_name": "Franklin",
+  "email": "wfranklin16@google.co.jp",
+  "country": "China",
+  "ip_address": "39.253.48.224"
+}, {
+  "id": 44,
+  "first_name": "Charles",
+  "last_name": "Phillips",
+  "email": "cphillips17@i2i.jp",
+  "country": "Russia",
+  "ip_address": "136.228.97.28"
+}, {
+  "id": 45,
+  "first_name": "Sara",
+  "last_name": "Diaz",
+  "email": "sdiaz18@usa.gov",
+  "country": "China",
+  "ip_address": "178.241.72.3"
+}, {
+  "id": 46,
+  "first_name": "Shirley",
+  "last_name": "Greene",
+  "email": "sgreene19@issuu.com",
+  "country": "Panama",
+  "ip_address": "12.63.105.36"
+}, {
+  "id": 47,
+  "first_name": "Diane",
+  "last_name": "Bailey",
+  "email": "dbailey1a@geocities.com",
+  "country": "Sweden",
+  "ip_address": "227.142.25.82"
+}, {
+  "id": 48,
+  "first_name": "Helen",
+  "last_name": "Reynolds",
+  "email": "hreynolds1b@ycombinator.com",
+  "country": "Portugal",
+  "ip_address": "179.67.119.222"
+}, {
+  "id": 49,
+  "first_name": "Raymond",
+  "last_name": "Mcdonald",
+  "email": "rmcdonald1c@mapy.cz",
+  "country": "Bangladesh",
+  "ip_address": "77.212.21.180"
+}, {
+  "id": 50,
+  "first_name": "Julie",
+  "last_name": "Moore",
+  "email": "jmoore1d@merriam-webster.com",
+  "country": "China",
+  "ip_address": "84.253.204.25"
+}, {
+  "id": 51,
+  "first_name": "Eugene",
+  "last_name": "Nichols",
+  "email": "enichols1e@va.gov",
+  "country": "Macedonia",
+  "ip_address": "214.153.179.228"
+}, {
+  "id": 52,
+  "first_name": "Louise",
+  "last_name": "Gardner",
+  "email": "lgardner1f@geocities.jp",
+  "country": "Russia",
+  "ip_address": "152.196.245.142"
+}, {
+  "id": 53,
+  "first_name": "Wayne",
+  "last_name": "Clark",
+  "email": "wclark1g@addtoany.com",
+  "country": "China",
+  "ip_address": "187.32.35.77"
+}, {
+  "id": 54,
+  "first_name": "Wanda",
+  "last_name": "Olson",
+  "email": "wolson1h@arizona.edu",
+  "country": "Brazil",
+  "ip_address": "195.172.195.111"
+}, {
+  "id": 55,
+  "first_name": "Sandra",
+  "last_name": "Thompson",
+  "email": "sthompson1i@mysql.com",
+  "country": "Malaysia",
+  "ip_address": "7.94.96.20"
+}, {
+  "id": 56,
+  "first_name": "Thomas",
+  "last_name": "Carroll",
+  "email": "tcarroll1j@drupal.org",
+  "country": "China",
+  "ip_address": "213.90.135.210"
+}, {
+  "id": 57,
+  "first_name": "Craig",
+  "last_name": "Garrett",
+  "email": "cgarrett1k@mac.com",
+  "country": "United States",
+  "ip_address": "119.246.238.37"
+}, {
+  "id": 58,
+  "first_name": "Craig",
+  "last_name": "Arnold",
+  "email": "carnold1l@vk.com",
+  "country": "Russia",
+  "ip_address": "69.192.91.5"
+}, {
+  "id": 59,
+  "first_name": "Billy",
+  "last_name": "Jordan",
+  "email": "bjordan1m@istockphoto.com",
+  "country": "China",
+  "ip_address": "164.43.43.206"
+}, {
+  "id": 60,
+  "first_name": "Alan",
+  "last_name": "Woods",
+  "email": "awoods1n@nature.com",
+  "country": "Serbia",
+  "ip_address": "73.31.81.129"
+}, {
+  "id": 61,
+  "first_name": "James",
+  "last_name": "Peters",
+  "email": "jpeters1o@howstuffworks.com",
+  "country": "United States",
+  "ip_address": "153.150.88.63"
+}, {
+  "id": 62,
+  "first_name": "Maria",
+  "last_name": "George",
+  "email": "mgeorge1p@deviantart.com",
+  "country": "Philippines",
+  "ip_address": "188.77.184.157"
+}, {
+  "id": 63,
+  "first_name": "Walter",
+  "last_name": "Gordon",
+  "email": "wgordon1q@huffingtonpost.com",
+  "country": "Thailand",
+  "ip_address": "162.118.151.209"
+}, {
+  "id": 64,
+  "first_name": "Wanda",
+  "last_name": "Graham",
+  "email": "wgraham1r@facebook.com",
+  "country": "Thailand",
+  "ip_address": "82.167.151.254"
+}, {
+  "id": 65,
+  "first_name": "Wanda",
+  "last_name": "Frazier",
+  "email": "wfrazier1s@last.fm",
+  "country": "Poland",
+  "ip_address": "52.236.19.63"
+}, {
+  "id": 66,
+  "first_name": "Sarah",
+  "last_name": "Rice",
+  "email": "srice1t@vkontakte.ru",
+  "country": "Indonesia",
+  "ip_address": "251.190.186.3"
+}, {
+  "id": 67,
+  "first_name": "Lois",
+  "last_name": "Jones",
+  "email": "ljones1u@washingtonpost.com",
+  "country": "Syria",
+  "ip_address": "104.122.69.173"
+}, {
+  "id": 68,
+  "first_name": "Sara",
+  "last_name": "Burton",
+  "email": "sburton1v@barnesandnoble.com",
+  "country": "United States",
+  "ip_address": "52.7.177.194"
+}, {
+  "id": 69,
+  "first_name": "Carlos",
+  "last_name": "Morrison",
+  "email": "cmorrison1w@bloglines.com",
+  "country": "Yemen",
+  "ip_address": "17.196.84.214"
+}, {
+  "id": 70,
+  "first_name": "Phillip",
+  "last_name": "Butler",
+  "email": "pbutler1x@home.pl",
+  "country": "Kazakhstan",
+  "ip_address": "207.176.97.255"
+}, {
+  "id": 71,
+  "first_name": "Alan",
+  "last_name": "Parker",
+  "email": "aparker1y@webnode.com",
+  "country": "Indonesia",
+  "ip_address": "0.154.209.231"
+}, {
+  "id": 72,
+  "first_name": "Diana",
+  "last_name": "Cooper",
+  "email": "dcooper1z@google.nl",
+  "country": "Norway",
+  "ip_address": "99.5.172.186"
+}, {
+  "id": 73,
+  "first_name": "Robin",
+  "last_name": "Torres",
+  "email": "rtorres20@google.com.au",
+  "country": "Indonesia",
+  "ip_address": "173.43.49.5"
+}, {
+  "id": 74,
+  "first_name": "Gloria",
+  "last_name": "Hudson",
+  "email": "ghudson21@yahoo.com",
+  "country": "Mongolia",
+  "ip_address": "142.121.151.170"
+}, {
+  "id": 75,
+  "first_name": "Anne",
+  "last_name": "Anderson",
+  "email": "aanderson22@myspace.com",
+  "country": "Brazil",
+  "ip_address": "107.27.129.211"
+}, {
+  "id": 76,
+  "first_name": "Jason",
+  "last_name": "Edwards",
+  "email": "jedwards23@acquirethisname.com",
+  "country": "Brazil",
+  "ip_address": "48.64.110.62"
+}, {
+  "id": 77,
+  "first_name": "Philip",
+  "last_name": "Robinson",
+  "email": "probinson24@joomla.org",
+  "country": "Spain",
+  "ip_address": "179.235.102.113"
+}, {
+  "id": 78,
+  "first_name": "Joseph",
+  "last_name": "Cook",
+  "email": "jcook25@springer.com",
+  "country": "Ukraine",
+  "ip_address": "17.181.14.165"
+}, {
+  "id": 79,
+  "first_name": "Joe",
+  "last_name": "Anderson",
+  "email": "janderson26@twitpic.com",
+  "country": "Indonesia",
+  "ip_address": "8.36.92.33"
+}, {
+  "id": 80,
+  "first_name": "Earl",
+  "last_name": "Patterson",
+  "email": "epatterson27@blog.com",
+  "country": "Philippines",
+  "ip_address": "117.80.90.42"
+}, {
+  "id": 81,
+  "first_name": "Kathleen",
+  "last_name": "Banks",
+  "email": "kbanks28@mashable.com",
+  "country": "Philippines",
+  "ip_address": "172.5.248.172"
+}, {
+  "id": 82,
+  "first_name": "Sandra",
+  "last_name": "Ryan",
+  "email": "sryan29@google.de",
+  "country": "China",
+  "ip_address": "168.54.5.195"
+}, {
+  "id": 83,
+  "first_name": "Amy",
+  "last_name": "Snyder",
+  "email": "asnyder2a@merriam-webster.com",
+  "country": "Armenia",
+  "ip_address": "43.168.160.142"
+}, {
+  "id": 84,
+  "first_name": "Christopher",
+  "last_name": "Ramos",
+  "email": "cramos2b@youku.com",
+  "country": "Moldova",
+  "ip_address": "168.238.225.86"
+}, {
+  "id": 85,
+  "first_name": "Frank",
+  "last_name": "Bradley",
+  "email": "fbradley2c@blog.com",
+  "country": "Indonesia",
+  "ip_address": "227.123.127.107"
+}, {
+  "id": 86,
+  "first_name": "Ashley",
+  "last_name": "Ellis",
+  "email": "aellis2d@free.fr",
+  "country": "Portugal",
+  "ip_address": "237.232.196.152"
+}, {
+  "id": 87,
+  "first_name": "Rose",
+  "last_name": "Carroll",
+  "email": "rcarroll2e@alibaba.com",
+  "country": "Russia",
+  "ip_address": "64.48.208.240"
+}, {
+  "id": 88,
+  "first_name": "Frances",
+  "last_name": "Diaz",
+  "email": "fdiaz2f@tiny.cc",
+  "country": "China",
+  "ip_address": "222.237.220.67"
+}, {
+  "id": 89,
+  "first_name": "Lawrence",
+  "last_name": "James",
+  "email": "ljames2g@archive.org",
+  "country": "Czech Republic",
+  "ip_address": "57.33.28.39"
+}, {
+  "id": 90,
+  "first_name": "Joan",
+  "last_name": "Tucker",
+  "email": "jtucker2h@forbes.com",
+  "country": "Morocco",
+  "ip_address": "71.100.78.79"
+}, {
+  "id": 91,
+  "first_name": "Phillip",
+  "last_name": "Olson",
+  "email": "polson2i@ibm.com",
+  "country": "Poland",
+  "ip_address": "82.28.218.36"
+}, {
+  "id": 92,
+  "first_name": "Teresa",
+  "last_name": "Montgomery",
+  "email": "tmontgomery2j@ted.com",
+  "country": "China",
+  "ip_address": "186.40.49.77"
+}, {
+  "id": 93,
+  "first_name": "Wanda",
+  "last_name": "Crawford",
+  "email": "wcrawford2k@instagram.com",
+  "country": "Brazil",
+  "ip_address": "255.199.107.255"
+}, {
+  "id": 94,
+  "first_name": "Kenneth",
+  "last_name": "Weaver",
+  "email": "kweaver2l@aol.com",
+  "country": "Uruguay",
+  "ip_address": "191.130.178.114"
+}, {
+  "id": 95,
+  "first_name": "Rachel",
+  "last_name": "Wells",
+  "email": "rwells2m@com.com",
+  "country": "China",
+  "ip_address": "28.52.66.25"
+}, {
+  "id": 96,
+  "first_name": "Wanda",
+  "last_name": "Carpenter",
+  "email": "wcarpenter2n@hostgator.com",
+  "country": "Czech Republic",
+  "ip_address": "55.255.164.108"
+}, {
+  "id": 97,
+  "first_name": "Nicole",
+  "last_name": "Lewis",
+  "email": "nlewis2o@nydailynews.com",
+  "country": "Ukraine",
+  "ip_address": "184.72.43.59"
+}, {
+  "id": 98,
+  "first_name": "Anthony",
+  "last_name": "Snyder",
+  "email": "asnyder2p@amazonaws.com",
+  "country": "Brazil",
+  "ip_address": "202.72.227.169"
+}, {
+  "id": 99,
+  "first_name": "Howard",
+  "last_name": "Lawson",
+  "email": "hlawson2q@earthlink.net",
+  "country": "Indonesia",
+  "ip_address": "84.202.130.55"
+}, {
+  "id": 100,
+  "first_name": "Norma",
+  "last_name": "Elliott",
+  "email": "nelliott2r@reference.com",
+  "country": "Ukraine",
+  "ip_address": "137.185.48.143"
+}
+
+];
+ };

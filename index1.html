@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="monApp">
+<head>
+ <title></title>
+
+</head>
+
+<body>
+
+ <div ng-view></div>
+
+
+<hr> <! avec app>
+<p><input type="text" ng-model="query1" /></p>
+filter by:
+<select ng-model="type3">
+ <option value="last_name">Last Name</option>
+ <option value="first_name">First Name</option>
+</select>
+<div ng-controller="CommentsCtrl2">
+ <div ng-repeat="comment in comments | filter:{first_name: query2} | orderBy:type2 ">
+  <p>{{comment.first_name}} {{comment.last_name}}
+  {{comment.email}}
+ </p>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.2.14/angular-route.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

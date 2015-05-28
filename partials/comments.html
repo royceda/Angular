@@ -1,0 +1,13 @@
+<hr>
+<p><input type="text" ng-model="query" /></p>
+filter by:
+<select ng-model="type2">
+ <option value="last_name">Last Name</option>
+ <option value="first_name">First Name</option>
+</select>
+<div ng-controller="CommentsCtrl">
+ <div ng-repeat="comment in comments | filter:{first_name: query2} | orderBy:type2 ">
+  <p>{{comment.first_name}} {{comment.last_name}}
+  {{comment.email}}
+ </p>
+</div>

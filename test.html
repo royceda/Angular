@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<<html>
+  <head>
+    <title>laaa</title>
+  </head>
+  <body ng-app>
+    <input type="text" ng-model="query"/>
+    {{query}}
+
+    <select ng-model="order">
+      <option value="+username">Par Nom</option>
+      <option value="+content">Par contenu</option>
+    </select>
+
+    <div ng-init="users=[{username:'Marc', content:'Salut les gens'},
+    {username:'Jean', content:'yooo'},
+    {username:'Reda', content:'First'}]">
+
+    <ul>
+      <div ng-repeat="user in users | filter:{username:query} | orderBy:order">
+        {{user.username}}
+      </div>
+
+    </ul>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+  </body>
+</html>

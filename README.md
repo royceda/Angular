@@ -1,2 +1,2 @@
 # Angular
-to learn to use angularJS by google
+To learn to use angularJS by google.
